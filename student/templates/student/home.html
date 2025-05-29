@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Site</title>
+
+</head>
+<body>
+
+       <h1>Welcome on the home page</h1>
+       <br>
+       <h3>If you want to do registerations then click on the register button</h3>
+       <a href="{% url 'register' %}">
+        <button input="type">Resigter</button>
+         </a>
+        <br>
+        <h3>if you are New candidate then click on the Login button</h3>
+        <a href="{% url 'new_login' %}">
+            <button input="type">Login</button>
+        </a>
+        
+
+</body>
+</html>

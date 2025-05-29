@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Site</title>
+
+</head>
+<body>
+      <h1>Employee Registration </h1>
+      {% if alert %}
+      <div style="color: red; font-weight: bold;">
+          {{ alert }}
+      </div>
+      {% endif %}
+      <form action="" method="post" novalidate>
+        {% csrf_token %}
+        
+        {{form.as_p}}
+       
+        <button input="type">Submit</button>
+        <h3>If you do not have the account then do your Registeration by clicking on the Register button </h3>
+        <a href="{% url 'new_login' %}">
+          <button type="button">Register</button>
+      </a>
+      <br>
+      <h3>If you forget your password then click on the Forget button</h3>
+        <a href="{% url 'forget_password' %}">
+          <button type="button">Forget</button>
+      </a>
+       
+       
+
+        
+
+</body>
+</html>

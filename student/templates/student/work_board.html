@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ employee.name }}'s Work Board</title>
+</head>
+<body>
+    <h1>Welcome, {{ employee.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Morning Work</h3>
+        <textarea name="morning_work" rows="5" cols="60">{{ log.morning_work }}</textarea>
+        
+        <h3>Evening Work</h3>
+        <textarea name="evening_work" rows="5" cols="60">{{ log.evening_work }}</textarea>
+
+        <br><br>
+        <button type="submit">Save Work</button>
+    </form>
+</body>
+</html>
